@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mood → Music Finder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>Mood → Music Finder</h1>
+      <p class="sub">Pick a vibe. Get fast links to good listens.</p>
+    </header>
+
+    <section class="card">
+      <div class="grid">
+        <label>
+          Mood
+          <select id="mood">
+            <option value="sad">Sad / heavy</option>
+            <option value="calm">Calm</option>
+            <option value="focus">Focus</option>
+            <option value="hype">Hype</option>
+            <option value="nostalgic">Nostalgic</option>
+            <option value="romantic">Romantic</option>
+            <option value="angry">Angry</option>
+            <option value="cozy">Cozy</option>
+          </select>
+        </label>
+
+        <label>
+          Style tag
+          <select id="tag">
+            <option value="piano">Piano</option>
+            <option value="orchestral">Orchestral</option>
+            <option value="lofi">Lo-fi</option>
+            <option value="acoustic">Acoustic</option>
+            <option value="ambient">Ambient</option>
+            <option value="synthwave">Synthwave</option>
+            <option value="jazz">Jazz</option>
+            <option value="strings">Strings</option>
+          </select>
+        </label>
+
+        <label>
+          Language / origin
+          <select id="lang">
+            <option value="">Any</option>
+            <option value="japanese">Japanese</option>
+            <option value="korean">Korean</option>
+            <option value="bangla">Bangla</option>
+            <option value="english">English</option>
+            <option value="instrumental">Instrumental (no language)</option>
+          </select>
+        </label>
+
+        <div class="toggles">
+          <label class="check">
+            <input type="checkbox" id="instrumental" />
+            Instrumental only
+          </label>
+          <label class="check">
+            <input type="checkbox" id="anime" />
+            Anime OST vibe
+          </label>
+          <label class="check">
+            <input type="checkbox" id="lyrics" />
+            With lyrics (if possible)
+          </label>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="go">Find music</button>
+        <button id="random" class="secondary">Random</button>
+        <button id="copy" class="secondary">Copy search phrase</button>
+      </div>
+
+      <div class="hint">
+        Search phrase: <code id="phrase">(click “Find music”)</code>
+      </div>
+    </section>
+
+    <section id="results" class="results"></section>
+
+    <footer>
+      <small>Tip: This MVP avoids API keys. Later you can swap in Spotify/Last.fm APIs.</small>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
